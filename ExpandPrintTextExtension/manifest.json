@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Expand and Print Movie Description",
+    "version": "1.0",
+    "description": "Expands the movie descriptions on movieinsider.com and prints the movie descriptions ",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "storage", "scripting", "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://www.movieinsider.com/movies/next-week"],
+        "js": ["content.js"]
+      }
+    ]
+ 
+  }
